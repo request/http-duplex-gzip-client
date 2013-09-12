@@ -1,0 +1,27 @@
+{
+  "name": "http-duplex-gzip-client",
+  "version": "0.0.0",
+  "description": "HTTP duplex client that accepts and decompresses gzip.",
+  "main": "index.js",
+  "dependencies": {
+    "http-duplex-client": "~0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeal/http-duplex-gzip-client"
+  },
+  "keywords": [
+    "http",
+    "duplex",
+    "gzip"
+  ],
+  "author": "Mikeal Rogers <mikeal.rogers@gmail.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/mikeal/http-duplex-gzip-client/issues"
+  }
+}
