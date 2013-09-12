@@ -4,7 +4,7 @@
   "description": "HTTP duplex client that accepts and decompresses gzip.",
   "main": "index.js",
   "dependencies": {
-    "http-duplex-client": "~0.3.0"
+    "http-duplex-client": "~0.4.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -1,4 +1,4 @@
-var HTTPDuplex = require('../http-duplex-client')
+var HTTPDuplex = require('http-duplex-client')
   , zlib = require('zlib')
   , util = require('util')
   ;
@@ -17,7 +17,7 @@ HTTPGzipDuplex.prototype.makeRequest = function (req) {
   req.headers['accept-encoding'] = 'gzip,deflate'
   self.req = self.http.request(req)
   self.req.on('response', function (resp) {
-    self._resp = resp
+    self._output = resp
     self.emit('response', resp)
 
     var encoding = resp.headers['content-encoding'] || 'identity'
@@ -37,6 +37,8 @@ HTTPGzipDuplex.prototype.makeRequest = function (req) {
     } else {
       output = resp
     }
+
+    self._output = output
 
     output.on('data', function (c) {
       if (!self.push(c)) output.pause()
